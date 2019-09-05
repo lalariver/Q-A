@@ -32,48 +32,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        monitor.pathUpdateHandler = { path in
-            DispatchQueue.main.async {
-                if path.status == .satisfied {
-                    print("satisfied")
-                    self.connectionLB.isHidden = true
-                } else {
-                    print("else")
-                    self.connectionLB.isHidden = false
-                }
-            }
-        }
-        monitor.start(queue: DispatchQueue.global())
-        
+        monitorStart()
         downLoadQustion()
     }
     
-    func downLoadQustion() {
-        acitivityView.color = UIColor.red
-        acitivityView.type = .pacman
-        acitivityView.startAnimating()
-        
-        for button in ansButtArr{
-            button.isEnabled = false
-        }
-        
-        let urlStr = "https://opentdb.com/api.php?amount=10&encode=base64"
-        guard let url = URL(string: urlStr) else { return }
-        let task = URLSession.shared.dataTask(with: url) { (data, res, exrr) in
-            let decoder = JSONDecoder()
-            decoder.dateDecodingStrategy = .iso8601
-            if let data = data, let results = try? decoder.decode(Results.self, from: data) {
-                self.questions = results.results
-                self.setupUI()
-                for results in results.results {
-                    print(results)
-                }
-            } else {
-                print("error")
-            }
-        }
-        task.resume()
-    }
+    // MARK: setup UI
     
     func setupUI() {
         guard let questions = questions else { return }
@@ -112,6 +75,8 @@ class ViewController: UIViewController {
         }
     }
     
+    //MARK: Button
+    
     @IBAction func next(_ sender: UIButton) {
         guard let questions = questions else { return }
         let tag = sender.tag
@@ -133,6 +98,52 @@ class ViewController: UIViewController {
             alertFunc(title: "", message: message)
         }
     }
+    
+    // MARK: Service
+    
+    func monitorStart() {
+        monitor.pathUpdateHandler = { path in
+            DispatchQueue.main.async {
+                if path.status == .satisfied {
+                    print("satisfied")
+                    self.connectionLB.isHidden = true
+                } else {
+                    print("else")
+                    self.connectionLB.isHidden = false
+                }
+            }
+        }
+        monitor.start(queue: DispatchQueue.global())
+    }
+    
+    func downLoadQustion() {
+        acitivityView.color = UIColor.red
+        acitivityView.type = .pacman
+        acitivityView.startAnimating()
+        
+        for button in ansButtArr{
+            button.isEnabled = false
+        }
+        
+        let urlStr = "https://opentdb.com/api.php?amount=10&encode=base64"
+        guard let url = URL(string: urlStr) else { return }
+        let task = URLSession.shared.dataTask(with: url) { (data, res, exrr) in
+            let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .iso8601
+            if let data = data, let results = try? decoder.decode(Results.self, from: data) {
+                self.questions = results.results
+                self.setupUI()
+                for results in results.results {
+                    print(results)
+                }
+            } else {
+                print("error")
+            }
+        }
+        task.resume()
+    }
+    
+    //MARK: Alert
     
     func alertFunc(title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
