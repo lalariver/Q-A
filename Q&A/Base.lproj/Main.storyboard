@@ -26,7 +26,6 @@
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="t11-ar-bA8">
                                 <rect key="frame" x="16" y="233" width="175" height="90"/>
-                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="0.84907427226027399" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="pEc-JS-192"/>
                                 </constraints>
@@ -36,21 +35,18 @@
                             </button>
                             <button hidden="YES" opaque="NO" tag="2" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="d2F-8h-61g">
                                 <rect key="frame" x="16" y="403" width="175" height="90"/>
-                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="0.84907427226027399" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OiL-As-mQg"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" tag="1" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="XZ3-Ai-cN6">
                                 <rect key="frame" x="223" y="233" width="175" height="90"/>
-                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="0.84907427226027399" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wfH-ai-751"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" tag="3" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="lIs-8U-Svd">
                                 <rect key="frame" x="223" y="403" width="175" height="90"/>
-                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="0.84907427226027399" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="guE-NJ-7cG"/>
                                 </connections>

@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension String {
+extension String { //擴充字串可解析base64
     func fromBase64() -> String? {
         guard let data = Data(base64Encoded: self) else {
             return nil
