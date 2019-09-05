@@ -13,6 +13,9 @@
 		9A0B9B4D231D22AC00DA6357 /* Q_A.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9A0B9B4B231D22AC00DA6357 /* Q_A.xcdatamodeld */; };
 		9A0B9B4F231D22AE00DA6357 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A0B9B4E231D22AE00DA6357 /* Assets.xcassets */; };
 		9A0B9B52231D22AE00DA6357 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A0B9B50231D22AE00DA6357 /* LaunchScreen.storyboard */; };
+		9A0B9B5A231D2EFD00DA6357 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0B9B59231D2EFD00DA6357 /* Results.swift */; };
+		9AA3BEED2320F84B00BE0317 /* ExtString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA3BEEC2320F84B00BE0317 /* ExtString.swift */; };
+		B2B0C696C72E77818AC7C19F /* Pods_Q_A.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B08738A0E583A354205C50AE /* Pods_Q_A.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,11 @@
 		9A0B9B4E231D22AE00DA6357 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A0B9B51231D22AE00DA6357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A0B9B53231D22AE00DA6357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A0B9B59231D2EFD00DA6357 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		9AA3BEEC2320F84B00BE0317 /* ExtString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtString.swift; sourceTree = "<group>"; };
+		A1DFF5A5968FB4ED6F7A5969 /* Pods-Q&A.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Q&A.release.xcconfig"; path = "Pods/Target Support Files/Pods-Q&A/Pods-Q&A.release.xcconfig"; sourceTree = "<group>"; };
+		B08738A0E583A354205C50AE /* Pods_Q_A.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Q_A.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB9FD7EAA9D43DDB34D9EE33 /* Pods-Q&A.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Q&A.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Q&A/Pods-Q&A.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2B0C696C72E77818AC7C19F /* Pods_Q_A.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10C9273B1B0701388A6F2288 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B08738A0E583A354205C50AE /* Pods_Q_A.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9A0B9B38231D22AC00DA6357 = {
 			isa = PBXGroup;
 			children = (
 				9A0B9B43231D22AC00DA6357 /* Q&A */,
 				9A0B9B42231D22AC00DA6357 /* Products */,
+				9E27AE8410E67D56B95514D2 /* Pods */,
+				10C9273B1B0701388A6F2288 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +77,8 @@
 			children = (
 				9A0B9B44231D22AC00DA6357 /* AppDelegate.swift */,
 				9A0B9B46231D22AC00DA6357 /* ViewController.swift */,
+				9AA3BEEC2320F84B00BE0317 /* ExtString.swift */,
+				9A0B9B59231D2EFD00DA6357 /* Results.swift */,
 				9A0B9B48231D22AC00DA6357 /* Main.storyboard */,
 				9A0B9B4E231D22AE00DA6357 /* Assets.xcassets */,
 				9A0B9B50231D22AE00DA6357 /* LaunchScreen.storyboard */,
@@ -67,6 +88,15 @@
 			path = "Q&A";
 			sourceTree = "<group>";
 		};
+		9E27AE8410E67D56B95514D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FB9FD7EAA9D43DDB34D9EE33 /* Pods-Q&A.debug.xcconfig */,
+				A1DFF5A5968FB4ED6F7A5969 /* Pods-Q&A.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A0B9B56231D22AF00DA6357 /* Build configuration list for PBXNativeTarget "Q&A" */;
 			buildPhases = (
+				0262E60F5507D1B261CF779E /* [CP] Check Pods Manifest.lock */,
 				9A0B9B3D231D22AC00DA6357 /* Sources */,
 				9A0B9B3E231D22AC00DA6357 /* Frameworks */,
 				9A0B9B3F231D22AC00DA6357 /* Resources */,
+				EF46B62DFBEA16FD3AF06055 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +165,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0262E60F5507D1B261CF779E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Q&A-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF46B62DFBEA16FD3AF06055 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Q&A/Pods-Q&A-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Q&A/Pods-Q&A-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9A0B9B3D231D22AC00DA6357 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +211,8 @@
 			files = (
 				9A0B9B47231D22AC00DA6357 /* ViewController.swift in Sources */,
 				9A0B9B45231D22AC00DA6357 /* AppDelegate.swift in Sources */,
+				9A0B9B5A231D2EFD00DA6357 /* Results.swift in Sources */,
+				9AA3BEED2320F84B00BE0317 /* ExtString.swift in Sources */,
 				9A0B9B4D231D22AC00DA6357 /* Q_A.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,8 +357,10 @@
 		};
 		9A0B9B57231D22AF00DA6357 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB9FD7EAA9D43DDB34D9EE33 /* Pods-Q&A.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H29WM3C788;
 				INFOPLIST_FILE = "Q&A/Info.plist";
@@ -295,6 +370,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "lawliet.Q-A";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,8 +378,10 @@
 		};
 		9A0B9B58231D22AF00DA6357 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1DFF5A5968FB4ED6F7A5969 /* Pods-Q&A.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H29WM3C788;
 				INFOPLIST_FILE = "Q&A/Info.plist";
@@ -313,6 +391,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "lawliet.Q-A";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
